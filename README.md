@@ -9,10 +9,10 @@ The code blocks found inside of the queries.txt file can be used to generate the
 
 ### Queries
 
-- ** By Country: Ratio of Sales Representatives to Customers vs. Number of Invoices
-- Artist Frequency Across Playlists
-- Purchases of Metal Tracks by U.S. Customers from 2009-2013
-- Latin Music Sales by Countries Repesented by Chinook Customers from 2009-2013 **
+- **By Country: Ratio of Sales Representatives to Customers vs. Number of Invoices**
+- **Artist Frequency Across Playlists**
+- **Purchases of Metal Tracks by U.S. Customers from 2009-2013**
+- **Latin Music Sales by Countries Repesented by Chinook Customers from 2009-2013**
 
 ## Additional Notes
 
