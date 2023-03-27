@@ -3,7 +3,6 @@
 
 /* QUERY 1 - customer to reps ratio vs invoices */
 
-
 WITH ratio AS
 (SELECT Country,
           round((ccount+0.4)/rcount) AS Customer_Rep_Ratio,
@@ -42,11 +41,12 @@ JOIN ratio ON ratio.Country = Spending.Country
 GROUP BY Spending.Country, ratio.Country, ratio.Customer_Rep_Ratio
 ORDER BY ratio.Customer_Rep_Ratio DESC
 
+/*END*/
+
 
 
 
 /* QUERY 2 Artist Frequency across Playlist */
-
 
 SELECT Artist,
        SUM(Freq) AS Times_Featured
@@ -66,11 +66,13 @@ GROUP BY Artist
 ORDER BY Times_Featured DESC
 LIMIT 25
 
+/*END*/
+
+
 
 
 
 /* QUERY 3 - Metal sales by US customers */
-
 
 SELECT YEAR, sum(Total)
 FROM(
@@ -93,11 +95,13 @@ SELECT I.InvoiceId,
 WHERE Country = 'USA'
 GROUP BY YEAR
 
+/*END*/
+
+
 
 
 
 /* QUERY 4 - Latin music sales by country */
-
 
 SELECT Country,
        sum(Total)
@@ -120,3 +124,5 @@ FROM
             I.Total DESC) TBL
 GROUP BY Country
 ORDER BY 2 DESC
+
+/*END*/
