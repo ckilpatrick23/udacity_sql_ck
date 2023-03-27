@@ -7,7 +7,7 @@ This repository includes a .sql file with 3 different queries intended to be per
 
 The code blocks found inside of the queries.txt file can be used to generate the following tables.
 
-## Queries
+### Queries
 
 - By Country: Ratio of Sales Representatives to Customers vs. Number of Invoices
 - Artist Frequency Across Playlists
