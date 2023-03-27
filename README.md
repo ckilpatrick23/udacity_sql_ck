@@ -22,5 +22,4 @@ The code blocks found inside of the the text file can be used to generate the fo
 You can see the results of each query as a chart [**here**](UDCTY_Project2_Ciero_Kilpatrick.pdf) .
 
 ## Additional Notes
-
 **Purpose:** This repository is meant to speak to my skillset by serving as an example of SQL Code. Please feel free to review and reach out to me.
