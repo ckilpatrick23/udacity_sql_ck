@@ -7,7 +7,9 @@
 
 ## Getting Started
 
-This repository includes a .sql file with 4 different queries intended to be performed on the sample data given for the 2nd project found in Udacity’s Business Analytics course. To run these queries, the chinook db database can be downloaded from this repo. 
+This repository includes a .sql file with 4 different queries performed on the sample data. To run these queries:
+- The chinook.db database is available for download in this repo. 
+- The ck_queries.txt files include 4 different blocks. You can select the code from the in between the `\*QUERY*\` title and the `\*END*\` comment to generate the tables.
 
 The code blocks found inside of the queries.txt file can be used to generate the following tables:
 
