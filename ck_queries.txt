@@ -1,4 +1,4 @@
-﻿/*Ciero Kilpatrick*/
+﻿/*CK*/
 
 
 /* QUERY 1 - customer to reps ratio vs invoices */
