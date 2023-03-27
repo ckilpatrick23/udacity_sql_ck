@@ -8,8 +8,8 @@
 ## Getting Started
 
 This repository includes a .sql file with 4 different queries performed on the sample data. To run these queries:
-- The chinook.db database is available for download in this repo. 
-- The ck_queries.txt files include 4 different blocks. You can select the code from the in between the `\*QUERY*\` title and the `\*END*\` comment to generate the tables.
+1. The chinook.db database is available for download in this repo
+2. The ck_queries.txt files include 4 different blocks. You can select the code from the in between the `\*QUERY*\` title and the `\*END*\` comment to generate the tables
 
 The code blocks found inside of the queries.txt file can be used to generate the following tables:
 
@@ -19,6 +19,8 @@ The code blocks found inside of the queries.txt file can be used to generate the
 - **Artist Frequency Across Playlists**
 - **Purchases of Metal Tracks by U.S. Customers from 2009-2013**
 - **Latin Music Sales by Countries Repesented by Chinook Customers from 2009-2013**
+
+You can see the results of each query as a chart [here](udacity_sql_ck/UDCTY_Project2_Ciero Kilpatrick.pdf)
 
 ## Additional Notes
 
