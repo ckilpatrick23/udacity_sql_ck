@@ -19,7 +19,7 @@ The code blocks found inside of the queries.txt file can be used to generate the
 - **Purchases of Metal Tracks by U.S. Customers from 2009-2013**
 - **Latin Music Sales by Countries Repesented by Chinook Customers from 2009-2013**
 
-You can see the results of each query as a chart [here](UDCTY_Project2_Ciero Kilpatrick.pdf).
+You can see the results of each query as a chart [a link](UDCTY_Project2_Ciero Kilpatrick.pdf).
 
 ## Additional Notes
 
