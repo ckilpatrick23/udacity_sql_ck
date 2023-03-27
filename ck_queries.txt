@@ -1,7 +1,7 @@
 ﻿/*Ciero Kilpatrick*/
 
 
-/* Query 1 - customer to reps ratio vs invoices */
+/* QUERY 1 - customer to reps ratio vs invoices */
 
 
 WITH ratio AS
@@ -45,11 +45,7 @@ ORDER BY ratio.Customer_Rep_Ratio DESC
 
 
 
-
-
-
-
-/* Query 2 Artist Frequency across Playlist */
+/* QUERY 2 Artist Frequency across Playlist */
 
 
 SELECT Artist,
@@ -73,7 +69,7 @@ LIMIT 25
 
 
 
-/* Query 3 - Metal sales by US customers */
+/* QUERY 3 - Metal sales by US customers */
 
 
 SELECT YEAR, sum(Total)
@@ -100,7 +96,7 @@ GROUP BY YEAR
 
 
 
-/* Query 4 - Latin music sales by country */
+/* QUERY 4 - Latin music sales by country */
 
 
 SELECT Country,
