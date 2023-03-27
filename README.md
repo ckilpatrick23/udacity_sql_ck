@@ -1,4 +1,4 @@
-# My Udacity Business Analytics NanoDegree SQL Project
+# README: My Udacity Business Analytics NanoDegree SQL Project
 **Description:** Example of using SQL code from Project 2 of Udacity's Business Analytics Nanodegree
 
 ## Getting Started
