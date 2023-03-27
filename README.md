@@ -9,7 +9,7 @@
 
 This repository includes a .txt file with 4 different queries performed on the sample data. To run these queries with a SQL application:
 1. The **chinook.db database** is compressed into a zip file available for download in this repo [here](chinook-db.zip).
-2. The [**ck_queries.txt**](ck_queries.txt)files include 4 different blocks. You can select the code from the in between the `\*QUERY*\` title and the `\*END*\` comment to generate the tables
+2. The [**ck_queries.txt**](ck_queries.txt) files include 4 different blocks. You can select the code from the in between the `\*QUERY*\` title and the `\*END*\` comment to generate the tables
 
 ### Queries
 The code blocks found inside of the the text file can be used to generate the following tables:
