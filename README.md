@@ -3,7 +3,7 @@
 
 ## About
 
-This repository includes a .sql file with 3 different queries intended to be performed on the sample data given for the 2nd project found in Udacity’s Business Analytics course. To run these queries, the chinook db database can be downloaded from this repo. 
+(2023) This project comes from Udacity's Business Analytics Nanodegree program. The purpose of the courses in this track is to obtain foundational skills in using Excel, SQL, and Tableau. In this project, Udacity provided us students with a sample dataset of an online music store named Chinook located in Canda. Instructions included creating tables to solve our own questions about the database using at least 2 different tables with `JOIN` and creating a column for aggregations. 
 
 ## Getting Started
 
