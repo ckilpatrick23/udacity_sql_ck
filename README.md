@@ -3,7 +3,7 @@
 
 ## About
 
-(2023) This project comes from Udacity's Business Analytics Nanodegree program. The purpose of the courses in this track is to obtain foundational skills in using Excel, SQL, and Tableau. In this project, Udacity provided us students with a sample dataset of an online music store named Chinook located in Canda. Instructions included creating tables to solve our own questions about the database using at least 2 different tables with `JOIN` , and aggregation functions (`SUM`, `COUNT`, `AVG`, etc.).
+(2023) This project comes from Udacity's Business Analytics Nanodegree program. The purpose of the courses in this track is to obtain foundational skills in using Excel, SQL, and Tableau. In this project, Udacity provided us students with a sample database of an online music store named Chinook located in Canda, with data from 2009-2013. Instructions included creating tables to solve our own questions about the database using at least 2 different tables with `JOIN` , and aggregation functions (`SUM`, `COUNT`, `AVG`, etc.).
 
 ## Getting Started
 
