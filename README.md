@@ -20,4 +20,4 @@ The code blocks found inside of the queries.txt file can be used to generate the
 
 ## Additional Notes
 
-This repository includes a .sql file with 3 different queries intended to be performed on the sample data given for the 2nd project found in Udacity’s Business Analytics course. To run these queries, the chinook db database can be downloaded from this repo. 
+**Purpose:** This repository is meant to speak to my skillset by serving as an example of SQL Code. Please feel free to review and reach out to me.
