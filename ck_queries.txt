@@ -1,0 +1,126 @@
+﻿/*Ciero Kilpatrick*/
+
+
+/* Query 1 - customer to reps ratio vs invoices */
+
+
+WITH ratio AS
+(SELECT Country,
+          round((ccount+0.4)/rcount) AS Customer_Rep_Ratio,
+          ccount AS Customers,
+          rcount AS Reps
+FROM(
+SELECT Country, COUNT(cxreps) AS rcount, SUM(cxreps) AS ccount
+FROM(
+          SELECT Country, count(supportrepid) AS cxreps
+            FROM Customer
+          GROUP BY country, supportrepid
+          Order by 2 desc
+)TBLII
+GROUP BY TBLII.Country
+Order By ccount desc, rcount desc
+) TBLI
+      GROUP BY Country, ccount, rcount
+      ORDER BY Customers DESC, customer_rep_ratio desc)
+SELECT ratio.Country,
+       ratio.Customer_Rep_Ratio,
+       sum(Spending.totals) AS Invoices,
+       sum(Spending.spend) AS Sales
+FROM
+  (SELECT*
+FROM(
+SELECT BillingCountry AS Country,
+          count(InvoiceDate) AS totals,
+          count(InvoiceId) AS Invoices,
+          sum(Total) AS spend,
+          EXTRACT(Year from(to_date(cast(I.InvoiceDate as TEXT),'YYYY-MM-DD'))) AS InvoiceYear
+   FROM Invoice I
+   GROUP BY InvoiceDate, Country
+   ORDER BY Invoices DESC) TBLIM
+WHERE InvoiceYear = '2013') Spending
+JOIN ratio ON ratio.Country = Spending.Country
+GROUP BY Spending.Country, ratio.Country, ratio.Customer_Rep_Ratio
+ORDER BY ratio.Customer_Rep_Ratio DESC
+
+
+
+
+
+
+
+
+/* Query 2 Artist Frequency across Playlist */
+
+
+SELECT Artist,
+       SUM(Freq) AS Times_Featured
+FROM(
+SELECT artist, track, count(Playlist) AS freq, genre
+FROM(
+SELECT PLT.PlaylistId, PL.Name AS Playlist, ARTST.Name AS artist, TRCK.Name AS track, GNR.Name AS genre
+FROM PlaylistTrack PLT
+JOIN Playlist PL ON PLT.PlaylistId = PL.PlaylistId
+JOIN Track TRCK ON TRCK.TrackId = PLT.TrackId
+JOIN Album ALBM ON ALBM.AlbumId = TRCK.AlbumId
+JOIN Artist ARTST ON ARTST.ArtistId = ALBM.ArtistId
+JOIN Genre GNR ON GNR.GenreId = TRCK.GenreId) AS PlaylistInfo
+GROUP BY Track, Artist, Genre
+ORDER BY FREQ DESC)TBL
+GROUP BY Artist
+ORDER BY Times_Featured DESC
+LIMIT 25
+
+
+
+
+/* Query 3 - Metal sales by US customers */
+
+
+SELECT YEAR, sum(Total)
+FROM(
+SELECT I.InvoiceId,
+          CONCAT(Customer.FirstName,' ',Customer.LastName) AS CustomerName,
+          I.Total,
+          I.BillingCountry AS Country,
+          GNR.Name AS Genre,
+          EXTRACT(Year from(to_date(cast(I.InvoiceDate as TEXT),'YYYY-MM-DD'))) AS YEAR
+   FROM InvoiceLine IL
+   JOIN Invoice I ON I.InvoiceId = IL.InvoiceId
+   JOIN Track TRCK ON TRCK.TrackId = IL.TrackId
+   JOIN Customer ON Customer.CustomerId = I.CustomerId
+   JOIN Genre GNR ON TRCK.GenreId = GNR.GenreId
+   WHERE GNR.Name = 'Metal'
+   GROUP BY CustomerName, I.InvoiceId, Genre
+   ORDER BY InvoiceDate,
+            Country,
+            I.Total DESC) TBL
+WHERE Country = 'USA'
+GROUP BY YEAR
+
+
+
+
+/* Query 4 - Latin music sales by country */
+
+
+SELECT Country,
+       sum(Total)
+FROM
+  (SELECT I.InvoiceId,
+          CONCAT(Customer.FirstName,' ',Customer.LastName) AS CustomerName,
+          I.Total,
+          Customer.Country,
+          GNR.Name AS Genre,
+          EXTRACT(Year from(to_date(cast(I.InvoiceDate as TEXT),'YYYY-MM-DD'))) AS YEAR
+   FROM InvoiceLine IL
+   JOIN Invoice I ON I.InvoiceId = IL.InvoiceId
+   JOIN Track TRCK ON TRCK.TrackId = IL.TrackId
+   JOIN Customer ON Customer.CustomerId = I.CustomerId
+   JOIN Genre GNR ON TRCK.GenreId = GNR.GenreId
+   WHERE GNR.Name = 'Latin'
+   GROUP BY I.InvoiceId, CustomerName, Customer.Country, gnr.name
+   ORDER BY InvoiceDate,
+            Country,
+            I.Total DESC) TBL
+GROUP BY Country
+ORDER BY 2 DESC
