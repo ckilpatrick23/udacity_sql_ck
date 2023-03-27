@@ -12,7 +12,7 @@ This repository includes a .sql file with 4 different queries performed on the s
 2. The ck_queries.txt files include 4 different blocks. You can select the code from the in between the `\*QUERY*\` title and the `\*END*\` comment to generate the tables
 
 ### Queries
-The code blocks found inside of the queries.txt file can be used to generate the following tables:
+The code blocks found inside of the [ck_queries.txt](ck_queries.txt) file can be used to generate the following tables:
 
 - **By Country: Ratio of Sales Representatives to Customers vs. Number of Invoices**
 - **Artist Frequency Across Playlists**
