@@ -7,7 +7,7 @@
 
 ## Getting Started
 
-This repository includes a .sql file with 4 different queries performed on the sample data. To run these queries:
+This repository includes a .sql file with 4 different queries performed on the sample data. To run these queries with a SQL application:
 1. The chinook.db database is available for download in this repo
 2. The ck_queries.txt files include 4 different blocks. You can select the code from the in between the `\*QUERY*\` title and the `\*END*\` comment to generate the tables
 
